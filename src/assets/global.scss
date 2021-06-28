@@ -1,0 +1,141 @@
+@import "normalize";
+@import "variables";
+
+#app {
+ font-family: Avenir, Helvetica, Arial, sans-serif;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ color: #2c3e50;
+}
+
+.container {
+ position: relative;
+ width: 700px;
+ margin: 0 auto;
+ padding: 20px 0;
+}
+
+.button {
+ display: inline-block;
+ flex-flow: row nowrap;
+ justify-content: center;
+ align-items: center;
+ border-radius: 8px;
+ max-width: 200px;
+ height: 40px;
+ line-height: 40px;
+ padding-left: 12px;
+ padding-right: 12px;
+ font-size: 18px;
+ font-weight: 500;
+ white-space: nowrap;
+ text-overflow: ellipsis;
+ outline: none;
+ border: none;
+ text-align: center;
+ transition: background-color 0.2s;
+ cursor: pointer;
+ text-decoration: none;
+
+ &--primary {
+  color: #fff;
+  background: $primary;
+  &:hover {
+   color: #fff;
+   background: $primary-hover;
+  }
+ }
+
+ &--danger {
+  color: #fff;
+  background: $danger-color;
+  &:hover {
+   color: #fff;
+   background: $danger-color-hover;
+  }
+ }
+
+ &--warning {
+  color: #fff;
+  background: $warning-color;
+  &:hover {
+   color: #fff;
+   background: $warning-color-hover;
+  }
+ }
+
+ &--large {
+  height: 56px;
+  line-height: 56px;
+  padding-left: 24px;
+  padding-right: 24px;
+ }
+
+ &:disabled {
+  background: #E6E6EB;
+  cursor: not-allowed;
+ }
+
+ &__text {
+  white-space: nowrap;
+ }
+}
+
+.form {
+ width: 100%;
+
+ &__input-wrapper {
+  position: relative;
+ }
+
+ &__columns {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+ }
+
+ &__item {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 24px;
+ }
+
+ &__label-text {
+  font-size: 14px;
+  margin-bottom: 8px;
+ }
+
+ &__text-input {
+  width: 100%;
+  height: 40px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 40px;
+  font-size: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background: #FFFFFF;
+  border: 1px solid #E6E6EB;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  appearance: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  resize: none;
+
+  &:focus {
+   border-color: #6b75ff;
+   box-shadow: 0 0 0 3px rgba(107, 117, 255, 0.24);
+  }
+  &::placeholder { color: rgba(39,39,41,.4); }
+
+  &--textarea {
+   height: 250px;
+   line-height: 21px;
+   padding-top: 10px;
+  }
+
+  &--textarea-mini {
+   height: 100px;
+  }
+ }
+}
